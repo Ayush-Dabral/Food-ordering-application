@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[Poppins]">
+    <header>
+        <nav class="bg-[#CE0505] w-full h-14 flex items-center justify-around mb-5">
+            <div
+                class="bg-white text-[#EB2929] text-3xl font-bold h-10 w-10 rounded-full flex items-center justify-center">
+                e!</div>
+            <div class="text-white text-sm font-medium">
+                <button class="h-10 px-2">Login</button>
+                <button class="h-10 px-2 border-2 rounded-md">Create an account</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main container -->
+    <main class="w-full flex flex-col items-center space-y-3">
+
+        <!-- h1 container -->
+        <div class="w-4/5">
+            <h1 class="font-bold text-titles text-xl sm:text-xl sm:font-bold md:text-3xl">Breakfast Places in Mumbai
+            </h1>
+        </div>
+
+        <!-- container of filter and restaurants -->
+        <div class="w-full flex flex-col items-center md:flex md:flex-col">
+
+            <!-- filter container nav for small screens -->
+            <div class="w-4/5 h-12 flex border-2 items-center justify-between mb-5 md:hidden shadow-md">
+                <h2 class="text-titles text-md font-semibold mx-4">Filters/Sort</h2>
+                <i class="large material-icons text-para font-semibold mx-4">keyboard_arrow_down</i>
+            </div>
+
+            <!-- container for filter and restaurant -->
+            <div class="w-full flex sm:w-4/5">
+
+                <!-- filter content -->
+                <div class="md:w-1/5 md:m-auto ">
+                    <section class="hidden w-full md:flex flex-col flex-center border-2 ">
+                        <h2 class="font-semibold mx-4 text-lg text-titles">Filters</h2>
+                        <div class="px-4 ">
+                            <h3 class=" text-titles text-md font-medium">Select Location</h3>
+                            <Select class="bg-white border-2 rounded-md border-para font-normal text-para">
+                                <option value="None">Select Location</option>
+                                <option value="Mumbai">Mumbai</option>
+                            </Select>
+                        </div>
+                        <div class="px-4 ">
+                            <h3 class=" text-titles text-md font-medium">Cusine</h3>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="checkbox" name="North Indian" id="cusine1">
+                                <label for="cusine1">North Indian</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="checkbox" name="South Indian" id="cusine2">
+                                <label for="cusine2">South Indian</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="checkbox" name="Chinese" id="cusine3">
+                                <label for="cusine3">Chinese</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="checkbox" name="Fast Food" id="cusine4">
+                                <label for="cusine4">Fast Food</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="checkbox" name="North Indian" id="cusine1">
+                                <label for="cusine1">Street Food</label>
+                            </div>
+                        </div>
+                        <div class="px-4">
+                            <h3 class=" text-titles text-md font-medium">Cost For Two</h3>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="radio" name="cft" id="cft1">
+                                <label for="cft1">Less than ` 500</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="radio" name="cft" id="cft2">
+                                <label for="cft2">` 500 to ` 1000</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="radio" name="cft" id="cft3">
+                                <label for="cft3">` 1000 to ` 1500</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="radio" name="cft" id="cft4">
+                                <label for="cft4">` 1500 to ` 2000</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="radio" name="cft" id="cft5">
+                                <label for="cft5">` 2000+</label>
+                            </div>
+                        </div>
+                        <div class="px-4">
+                            <h3 class=" text-titles text-md font-medium">Sort</h3>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="radio" name="sort" id="sort1">
+                                <label for="sort1">Price low to high</label>
+                            </div>
+                            <div class="text-para text-md font-normal">
+                                <input class="border-titles" type="radio" name="sort" id="sort2">
+                                <label for="sort2">Price high to low</label>
+                            </div>
+                        </div>
+                        <button
+                            class="border-2 border-[#CE0505] text-[#CE0505] text-lg font-medium rounded-md mx-4 ">Apply</button>
+                    </section>
+                </div>
+
+
+                <!-- container for restaurants -->
+                <div class="w-full md:w-4/5">
+
+                    <!-- restaurant -->
+                    <a href="#">
+                        <section class="w-full md:my-5 md:w-3/5 border-2 md:mx-auto h-56 shadow-lg">
+
+                            <!-- restaurant top -->
+                            <div class="flex w-full h-4/6">
+                                <div class="w-2/5 relative flex items-center">
+                                    <img class="absolute w-full h-full p-3 object-cover" src="\Images\restaurant.png"
+                                        alt="Restaurant Image">
+                                </div>
+                                <div class="w-3/5 mx-3 flex flex-col justify-center">
+                                    <h2 class="text-titles text-lg font-semibold">The Big Chill Cakery</h2>
+                                    <h3 class="text-titles text-md font-medium">FORT</h3>
+                                    <p class="text-para text-sm font-normal">Shop 1, Plot D, Samruddhi Complex,
+                                        Chincholi …</p>
+                                </div>
+                            </div>
+                            <hr class="mx-3">
+                            <!-- restaurant bottom -->
+                            <div class="h-2/6 flex items-center">
+                                <table class="w-1/2 mx-3">
+                                    <tr>
+                                        <th class="text-start text-para text-sm font-medium">Cusine:</th>
+                                        <td class="text-titles text-sm font-medium">Bakery</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-start text-para text-sm font-medium">Cost for two:</th>
+                                        <td class="text-titles text-sm font-medium">₹700</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+                    </a>
+
+                    <!-- restaurant -->
+                    <a href="#">
+                        <section class="w-full my-5 md:w-3/5 border-2 md:mx-auto h-56 shadow-lg">
+
+                            <!-- restaurant top -->
+                            <div class="flex w-full h-4/6">
+                                <div class="w-2/5 relative flex items-center">
+                                    <img class="absolute w-full h-full p-3 object-cover" src="\Images\restaurant.png"
+                                        alt="Restaurant Image">
+                                </div>
+                                <div class="w-3/5 mx-3 flex flex-col justify-center">
+                                    <h2 class="text-titles text-lg font-semibold">The Big Chill Cakery</h2>
+                                    <h3 class="text-titles text-md font-medium">FORT</h3>
+                                    <p class="text-para text-sm font-normal">Shop 1, Plot D, Samruddhi Complex,
+                                        Chincholi …</p>
+                                </div>
+                            </div>
+                            <hr class="mx-3">
+                            <!-- restaurant bottom -->
+                            <div class="h-2/6 flex items-center">
+                                <table class="w-1/2 mx-3">
+                                    <tr>
+                                        <th class="text-start text-para text-sm font-medium">Cusine:</th>
+                                        <td class="text-titles text-sm font-medium">Bakery</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-start text-para text-sm font-medium">Cost for two:</th>
+                                        <td class="text-titles text-sm font-medium">₹700</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+                    </a>
+
+                    <!-- slider -->
+                    <div class="w-4/5 md:3/5 flex mx-auto justify-evenly">
+                        <i class="large material-icons">arrow_back_ios</i>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <i class="large material-icons">arrow_forward_ios</i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+
+    </script>
+</body>
+
+</html>
